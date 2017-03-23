@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+          <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300' rel='stylesheet' type='text/css'>
+          <script src="frontend.js"></script>
+          <script src="jquery-3.2.0.min.js"></script>
+
+   </head>
+    <body>
+  
+
+<title>BarCode Scanner - PhoneGapPro.com</title>
+ <script type="text/javascript" src="cordova.js"></script>
+ <script type="text/javascript" src="barcode.js"></script>
+ </script>
+</head>
+<body>
+ <h3>BAR CODE SCANNER</h3>
+ <button id="scan" onclick="scan()">SCAN</button>
+<!-- <button type="button1" class="btn" onclick="BackKeyDown()"><</button> -->
+
+  	<select class="form-control">
+  <option>Tool 1</option>
+  <option>Tool 2</option>
+  <option>Tool 3</option>
+  <option>Tool 4</option>
+  <option>Tool 5</option>
+</select>
+
+
+
+<input  class="dato" type="date" id="myDate" disabled />
+
+<input class="freewriting" id="IDtekst" type="text"  placeholder="Bruker id">
+<input class="freewriting" id="scanData" type="text"  placeholder="Scandata">
+
+<!-- <body onload="setDate();"> -->
+
+
+
+<button type="button1" id="sqlSporring">sqlSPorring</button>
+<button type="button1" id="inputButton">input</button>
+
+<script>
+$('#sqlSporring').click(function() {
+  console.log('ja');
+  var BrukerIDen = $('#IDtekst').val();
+
+  // $('.freewriting').val(BrukerIDen);
+
+  $.get( "/finnBruker/" + BrukerIDen, function( data ) {
+  
+ //console.log('her er dataen:' + data );
+ alert('her er dataen:' + data );
+});
+});
+
+$('#inputButton').click(function() {
+  console.log('yes');
+var brukerID = $('#IDtekst').val();
+var scanData = $('#scanData').val();
+
+$.post( "/InputScanData/"+brukerID+"/"+scanData, function( data ) {
+  console.log('respons: ' +data);
+});
+});
+
+
+
+
+</script>
+     </body>
+</html>
