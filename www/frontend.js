@@ -32,8 +32,3 @@ function setDate() {
   document.getElementById('myDate').value =today;
 }
 
-function succesMsg() {
-  alert('You successfully transfered the data to NOV');
-  BackKeyDown();
-
-}

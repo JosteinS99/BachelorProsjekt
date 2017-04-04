@@ -12,7 +12,12 @@ var path = require('path');
 app.use(express.static(path.join(__dirname, 'www'))); //  "public" off of current is root
 
 
-
+  var connection = mysql.createConnection({
+  host: "localhost",
+  user: "cola",
+  password: "cola",
+  database: "mydb"
+});
 // con.end(function(err) {
   // The connection is terminated gracefully
   // Ensures all previously enqueued queries are still
@@ -42,12 +47,7 @@ function sqldummy(req, res, next) {
 
 function sqlsporring(id) {
 // koble til database
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "cola",
-  password: "cola",
-  database: "mydb"
-});
+
 
 // spørring
 var dataFraSQL = con.query('INSERT INTO Users (Bruker_navn) VALUES ("Ben");');
@@ -61,14 +61,80 @@ return dataFraSQL;
 
 app.post("/postinfo/:data", postinfo);
 
-app.post('/InputScanData/:id/:scanData', function (req, res) {
+app.post('/addNewLocation/:locID/:locationName', function (req, res) {
 
-  var con = mysql.createConnection({
-  host: "localhost",
-  user: "cola",
-  password: "cola",
-  database: "mydb"
-});
+
+
+   var locationID = req.params.locID;
+   var locationName = req.params.locationName;
+   console.log('Location name = ' + locationName);
+   console.log('Location ID = ' + locationID);
+
+   // validering før spørring
+   //var denneSporringen = "UPDATE Users SET scanData = " + scanData + " WHERE Bruker_id =" + brukerID + ";";
+
+  // var denneSporringen = "UPDATE Users SET scanData = 'tyolo' WHERE Bruker_id = 2;";
+
+  var denneSporringen = "UPDATE Location SET Sted_navn = '"+ locationName +"' WHERE Sted_id = "+locationID+";";
+
+  connection.query(denneSporringen, function (error, results, fields) {
+  if (error) {
+  console.log('Couldn\'t update location name on input ID');
+  res.send('Couldn\'t update location name on input ID');
+  throw error;
+  } else {
+    console.log(locationName+ ': has been added to location ID: ' +locationID);
+    res.send(locationName+ ': has been added to location ID: ' +locationID);
+  }
+  });
+
+
+  });
+
+app.post('/InputDataen/:barcodeScan/:Kategori/:verktoy/:Sted/:datoTid/:optionalTekst', function (req, res) {
+
+  
+
+// spørring
+// var dataFraSQL = con.query('INSERT INTO Users (Bruker_navn) VALUES ("Ben");');
+// returner data
+// return dataFraSQL;
+    var barcodeData = req.params.barcodeScan;
+    var KategoriData = req.params.Kategori;
+   var verktoyData = req.params.verktoy;
+   var stedData = req.params.Sted;
+   var datoTidData = req.params.datoTid;
+   var optionalTekstData = req.params.optionalTekst;
+   console.log('barcode = ' + barcodeData);
+   console.log('Kategori = ' + KategoriData);
+   console.log('verktøy = ' + verktoyData);
+   console.log('Sted = ' + stedData);
+   console.log('dato og tid = ' + datoTidData);
+    console.log('Frihåndstekst = ' + optionalTekstData);
+   // validering før spørring
+   //var denneSporringen = "UPDATE Users SET scanData = " + scanData + " WHERE Bruker_id =" + brukerID + ";";
+
+  // var denneSporringen = "UPDATE Users SET scanData = 'tyolo' WHERE Bruker_id = 2;";
+
+ // var denneSporringen = "UPDATE altdata SET Category_name = '"+ KategoriData +"', SET Tool_name = '"+verktoyData+"', SET Sted_navn = '"+stedData+"', SET Datotid = '"+datoTidData+"' WHERE Bruker_id = "+brukerID+";";
+var denneSporringen = "INSERT INTO altdata (Data_id, Barcode_scan, Dato_tid, Sted_navn, Category_name, Tool_name, Optional_tekst) VALUES (NULL, '"+barcodeData+"', '"+datoTidData+"', '"+stedData+"', '"+KategoriData+"', '"+verktoyData+"', '"+optionalTekstData+"');";
+
+  connection.query(denneSporringen, function (error, results, fields) {
+  if (error) {
+  console.log('INSERT funksjonen din kunne ikke legges til');
+  res.send('INSERT funksjonen din kunne ikke legges til');
+  throw error;
+  } else {
+    console.log("La inn: " +barcodeData+", " +datoTidData+", "+stedData+", "+KategoriData+", "+verktoyData+", "+optionalTekstData+". i tabbelen altdata");
+    res.send("La inn: " +barcodeData+", " +datoTidData+", "+stedData+", "+KategoriData+", "+verktoyData+", "+optionalTekstData+". i tabbelen altdata");
+  }
+  });
+
+}); 
+
+/*app.post('/InputScanData/:id/:scanData', function (req, res) {
+
+  
 
 // spørring
 // var dataFraSQL = con.query('INSERT INTO Users (Bruker_navn) VALUES ("Ben");');
@@ -87,7 +153,7 @@ app.post('/InputScanData/:id/:scanData', function (req, res) {
 
   var denneSporringen = "UPDATE Users SET scanData = '"+ scanData +"' WHERE Bruker_id = "+brukerID+";";
 
-  con.query(denneSporringen, function (error, results, fields) {
+  connection.query(denneSporringen, function (error, results, fields) {
   if (error) {
   console.log('update user funka ikke');
   res.send('update user funka ikke');
@@ -98,18 +164,12 @@ app.post('/InputScanData/:id/:scanData', function (req, res) {
   }
   });
 
-}); 
+}); */ 
 
 // GET ruter:
 app.get('/finnBruker/:id', function (req, res) {
 
-  var con = mysql.createConnection({
-  host: "localhost",
-  user: "cola",
-  password: "cola",
-  database: "mydb"
-});
-
+ 
 // spørring
 // var dataFraSQL = con.query('INSERT INTO Users (Bruker_navn) VALUES ("Ben");');
 // returner data
@@ -122,7 +182,7 @@ app.get('/finnBruker/:id', function (req, res) {
 
    //var denneSporringen = "SELECT * FROM Users;";
 
-   con.query(denneSporringen, function (error, results, fields) {
+   connection.query(denneSporringen, function (error, results, fields) {
   if (error) {
  
   }

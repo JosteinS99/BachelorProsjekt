@@ -3,12 +3,12 @@
     <feature name="BarcodeScanner">
         <param name="browser-package" value="BarcodeScanner" />
     </feature>
-    <name>nytt prosjekt</name>
+    <name>Oilrig scanapp</name>
     <description>
         A blank PhoneGap app.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author>
+        Kojar,cuong,jostein
     </author>
     <content src="index.html" />
     <access origin="*" />

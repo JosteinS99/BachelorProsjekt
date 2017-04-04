@@ -2,7 +2,7 @@ function scan(){
 
      cordova.plugins.barcodeScanner.scan(
         function (result) {
-          $('#scanData').val(result.text);
+          $('#scanField').val(result.text);
           
            console.log("We got a barcode\n" +
                   "Result: " + result.text + "\n" +
@@ -17,7 +17,7 @@ function scan(){
             alert("Scanning failed: " + error);
         },
         {
-            preferFrontCamera : true, // iOS and Android
+            preferFrontCamera : false, // iOS and Android
             showFlipCameraButton : true, // iOS and Android
             showTorchButton : true, // iOS and Android
             torchOn: true, // Android, launch with the torch switched on (if available)

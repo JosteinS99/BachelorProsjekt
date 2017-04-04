@@ -24,22 +24,22 @@
  <button id="scan" onclick="scan()">SCAN</button>
 <!-- <button type="button1" class="btn" onclick="BackKeyDown()"><</button> -->
 
-  	<select class="form-control">
-  <option>Tool 1</option>
-  <option>Tool 2</option>
-  <option>Tool 3</option>
-  <option>Tool 4</option>
-  <option>Tool 5</option>
+  	<select class="form-control" id="kategoriVelger">
+  <option id="kat1">Kat 1</option>
+  <option>Kat 2</option>
+  <option>Kat 3</option>
+  <option>Kat 4</option>
+  <option>Kat 5</option>
 </select>
 
 
 
 <input  class="dato" type="date" id="myDate" disabled />
-
-<input class="freewriting" id="IDtekst" type="text"  placeholder="Bruker id">
-<input class="freewriting" id="scanData" type="text"  placeholder="Scandata">
-
-<!-- <body onload="setDate();"> -->
+<input class="freewriting" id="scanField" type="text"  placeholder="Scanned code" disabled>
+<input class="freewriting" id="toolData" type="text"  placeholder="Verktøy">
+<input class="freewriting" id="locationData" type="text"  placeholder="Location">
+<input class="freewriting" id="optTekst" type="text"  placeholder="optional tekst"> 
+<body onload="setDate();"> 
 
 
 
@@ -47,6 +47,22 @@
 <button type="button1" id="inputButton">input</button>
 
 <script>
+
+
+/*$('#inputButton').click(function() {
+  
+  var locationID = $('#IDtekst').val();
+  var locationName = $('#locationData').val();
+  
+
+ $.post("/addNewLocation/"+locationID+"/"+locationName, function ( data ) {
+  // printer til cmd så vi kan se at det funket
+  console.log('This data was posted to the database: ' +data);
+  // sender en pop up melding til bruker slik at han vet inputen funket
+  alert(data);
+});
+}); */
+
 $('#sqlSporring').click(function() {
   console.log('ja');
   var BrukerIDen = $('#IDtekst').val();
@@ -60,12 +76,30 @@ $('#sqlSporring').click(function() {
 });
 });
 
-$('#inputButton').click(function() {
+/*$('#inputButton').click(function() {
   console.log('yes');
 var brukerID = $('#IDtekst').val();
 var scanData = $('#scanData').val();
 
+// $.post( "http://1.24.567:9222/InputScanData/"+brukerID+"/"+scanData, function( data ) {    <------ dette er når vi bruker phonegap sin port på :3000
 $.post( "/InputScanData/"+brukerID+"/"+scanData, function( data ) {
+  console.log('respons: ' +data);
+});
+});
+*/
+
+
+
+$('#inputButton').click(function() {
+  console.log('yes');
+var ScanDataen = $('#scanField').val();
+var Kategorien = $('#kategoriVelger').val();
+var Verktoyet = $('#toolData').val();
+var Stedet = $('#locationData').val();
+var datoTiden = $('#myDate').val();
+var optionalTeksten = $('#optTekst').val();
+// $.post( "http://1.24.567:9222/InputScanData/"+brukerID+"/"+scanData, function( data ) {    <------ dette er når vi bruker phonegap sin port på :3000
+$.post( "/InputDataen/"+ScanDataen+"/"+Kategorien+"/"+Verktoyet+"/"+Stedet+"/"+datoTiden+"/"+optionalTeksten, function( data ) {
   console.log('respons: ' +data);
 });
 });
