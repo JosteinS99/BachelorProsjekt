@@ -1,0 +1,40 @@
+/*// $(document).ready(function() {
+//     $("div#extraControls").removeClass("hidden");
+// });
+*/
+
+textarea {
+    margin: 0px;
+    width: 342px;
+    height: 241px;
+  }
+
+div.hidden
+{
+   display: none
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #f01313;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+
+#localdate {
+  width: 180px;
+  height: 20px;
+}
+
+#savePage{
+  margin-left: 15px;
+  margin-right: 40px;
+  margin-top: 0x;
+  margin-bottom: 0px;
+}
