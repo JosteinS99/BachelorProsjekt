@@ -1,0 +1,123 @@
+/*// $(document).ready(function() {
+//     $("div#extraControls").removeClass("hidden");
+// });
+*/
+
+textarea {
+    margin: 0px;
+    width: 342px;
+    height: 241px;
+  }
+
+div.hidden
+{
+  /* display: none*/
+}
+
+.btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #f01313;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+
+#localdate {
+  width: 180px;
+  height: 20px;
+}
+
+.buttons{
+/*    background-color: red;*/
+  position: inherit;
+  float: left;
+  padding-top: 25px;
+}
+ 
+
+.scanButton{
+  bottom: 1em;
+    left: 42.5%;
+    position: absolute;
+    height: 14%;
+    width: 15%;
+    background-color: #585656;
+    color: white;
+    z-index: 10007;
+    text-align: center;
+    border-radius: 10em;
+    border: 5px solid #aa9898;
+}
+
+.content-block-title {
+    text-align: center;
+    font-weight:  bold;
+}
+
+
+/*Icons*/
+.succesfulUpload {
+/*display: none; */
+color:green;
+}
+
+.delete {
+  /*kanskje lage en class for deletene?*/
+     top: 26px;
+    color: red;
+    float: right;
+}
+
+
+
+/*Upload button*/
+#upload{
+  position: relative;
+  top: 50px;
+  width: 50%;
+  left: 25%;
+}
+
+
+
+.rowbox{
+position: relative;
+/*background-color: green; */
+height: 80px;
+}
+
+.textbox{
+overflow: hidden;
+height: 59px;
+width: 70%;
+text-align: center;
+/*background-color: lightblue;  */
+}
+
+table {
+ border-collapse: collapse;
+}
+
+
+#box {
+border: 1px solid red;
+  width: 100%;
+  position: relative;
+    top: 20px;
+    left: 0px;
+  /*  background-color: blue;*/
+}
+
+.input {
+    font-size: 22pt;
+}
+
+input[type="text"] {
+    height: 1.5em;
+    width: 93%;
+}
