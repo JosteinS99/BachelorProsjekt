@@ -27,6 +27,18 @@ var mainView = myApp.addView('.view-main', {
 
 
 
+
+$$(document).on('pageInit', function(e){
+  //do something here when page loaded and initialized
+var page = e.detail.page;
+if (page.name === 'index') {
+  //showpop
+    $$( "#showPop" ).click(function() {
+     mainView.router.loadContent($$('#ourNewPage').html());
+    });
+  }
+});
+
 // $$(document).on('pageInit','.page[data-page="about"]', function(e){
 //     //do anything
 //         alert("do something");
@@ -37,8 +49,6 @@ var mainView = myApp.addView('.view-main', {
 //     //do anything
 
 // };
-
-
 
 
 

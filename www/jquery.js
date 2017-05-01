@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 // <button id="addDiv">Add div Inside #box</button>
 
-$(document).on('click', '#addDiv', function(e) {
+$(document).on('click', '#save', function(e) {
    var randomId = Math.random().toString(32).slice(2);
 
    var test =("<tr class='rowbox' id='id"+randomId+"'><th class='textbox'><input type='text' placeholder='MM/DD/YYYY' class='input'></th><th class='buttons'><span class='material-icons succesfulUpload'>check_circle</span><span name='"+randomId+"' class='material-icons delete' id='delete'>delete</span></th></tr>");
@@ -28,9 +28,9 @@ $(document).on('click', '#delete', function(e) {
    $(thisRowbox).remove();
 });
 
-
-
-
+  // $(thisRowbox).fadeOut(500, function () {
+  //   $(this).remove();
+  // });
 
                  
 

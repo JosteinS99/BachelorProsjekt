@@ -1,17 +1,30 @@
-/*// $(document).ready(function() {
-//     $("div#extraControls").removeClass("hidden");
-// });
-*/
+.item-title {
+
+}
+
+
+#select{ border-color:#cccccc; 
+  padding:6px; 
+  font-size:17px; 
+  text-align:center; border-width:1px; 
+  border-radius:14px; 
+  border-style:solid; 
+  box-shadow: 0px 0px 0px 0px rgba(42,42,42,.75);
+ font-weight:normal; font-style:none;  
+} 
+
+
+ 
 
 textarea {
     margin: 0px;
-    width: 342px;
+    width: 100%;
     height: 241px;
   }
 
 div.hidden
 {
-  /* display: none*/
+   display: none
 }
 
 .btn {
@@ -105,11 +118,11 @@ table {
 
 
 #box {
-border: 1px solid red;
+/*border: 1px solid red;*/
   width: 100%;
   position: relative;
     top: 20px;
-    left: 0px;
+    left: -7%;
   /*  background-color: blue;*/
 }
 
@@ -118,6 +131,6 @@ border: 1px solid red;
 }
 
 input[type="text"] {
-    height: 1.5em;
-    width: 93%;
+    height: 1.6em;
+    width: 90%;
 }

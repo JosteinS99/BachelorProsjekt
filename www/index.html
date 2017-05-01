@@ -22,10 +22,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   </head>
+<script type="text/template" id="ourNewPage">
+  <div class="navbar">
+            <div class="navbar-inner">
+               <div class="center">Rigscan</div>
+           </div>
+  </div>
+  <div class="page" data-page="my-page">
+   <div class="page-content"> 
+     <p>Here comes the content</p>
+   </div>
+  </div>
+</script>
 
-  <body class="theme-red">
+  <body class="theme-red" >
     <div class="views ">
-     <div class="scanButton"></div>
+   <!--   <div class="scanButton"></div> -->
       <div class="view view-main">
         <div class="pages navbar-fixed toolbar-fixed">
             <div class="page layout-white" data-page="index">
@@ -36,28 +48,27 @@
                  </div>
 
                  <!--  BOTTOM toolbar -->
-            <!--<div class="toolbar toolbar-bottom">
+            <div class="toolbar toolbar-bottom">
+                 <div class="toolbar-inner">
+                    <a href="#send" class="link">send</a>
+                <!--     <a href="#saved" class="link"><span class="material-icons">save</span>Saved</a>
+                    <a href="#" class="link">Link 3</a> -->
+                 </div>
+              </div> 
+           <!--     <div class="toolbar toolbar-bottom">
                  <div class="toolbar-inner">
                     <a href="#send" class="link"><span class="material-icons">send</span>Send</a>
                     <a href="#saved" class="link"><span class="material-icons">save</span>Saved</a>
                     <a href="#" class="link">Link 3</a>
                  </div>
               </div> -->
-               <div class="toolbar toolbar-bottom">
-                 <div class="toolbar-inner">
-                    <a href="#send" class="link"><span class="material-icons">send</span>Send</a>
-                    <a href="#saved" class="link"><span class="material-icons">save</span>Saved</a>
-                    <a href="#" class="link">Link 3</a>
-                 </div>
-              </div>
 
               <!-- Page content goes here -->
             <div class="page-content">
                <div class="container">
               <div class="content-block-title">Saved data</div>
                   
-                    <ul>
-                     
+                    <ul> 
                    <table id="box">
 
 
@@ -67,27 +78,18 @@
                     </tr>
 
 
-<button id="addDiv">Add div Inside #box</button>
-<!--         
-    <div class="actions">
-        <button class="clone">Clone</button> 
-        <button class="remove">Remove</button>
-    </div>
- -->
+<!-- <button id="addDiv">Add div Inside #box</button> -->
 
                   </table>
 
-                      
-         
-
-
+                    
                      <div class=".col-100.tablet-50">
                         <input type="submit" value="Upload" id="upload" class="button button-big button-fill color-red"/>
                      </div>
-              </div>
-           </div>   
+              </div>  <!-- container end -->
+           </div>  <!--  page content end -->
                
-      </div>
+      </div> <!-- page div end(index) -->
 
                 <!-- SEND PAGE  se på dynamic page på fm7 tutorial-->
     
@@ -100,23 +102,21 @@
 
               <div class="toolbar toolbar-bottom">
                  <div class="toolbar-inner">
-                  <a href="#index" class="link"></a>
+                  <a href="#index" class="link">home</a>
+                    <a href="#" class="link" id="showPop">ShowPop</a>
                  </div>
               </div>
 
               <div class="page-content">
-             
-             <!--    <input class="freewriting" id="IDtekst" type="text"  placeholder="Bruker id">
-                <input class="freewriting" id="scanData" type="text"  placeholder="Scandata"> -->
 
               <div class="item-content">
                  <div class="item-inner"> 
                     <div class="item-title label">Category</div>
                         <div class="item-input">
-                           <select>
+                           <select id="select">
                              <option>Equipment 1</option>
                              <option>Equipment 2</option>
-                            </select>
+                           </select>
                         </div>
                 </div>
               </div>
@@ -139,14 +139,16 @@
                      <input type="submit" value="Send" class="button button-big button-fill color-red"/>       
                   </div>
                   <div class="col-50.tablet-25">
-                    <input type="submit" value="Save" class="button button-big button-fill color-gray"/>
+                    <input type="submit" value="Save" class="button button-big button-fill color-gray" id="save"/>
                   </div>
               </div> 
 
 
-              </div>
-           </div>
-          
+              </div> <!--  content end(send) -->
+           </div> <!-- page end (send) -->
+         </div>  <!-- fixed navbar end -->
+    </div> <!-- view main end -->
+</div> <!-- view end -->
 
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.min.js"></script>
