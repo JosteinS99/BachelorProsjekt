@@ -8,6 +8,7 @@
     <title>NOV Rigscan</title>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="jquery.js"></script>
+
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.ios.min.css">
     <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
@@ -22,6 +23,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   </head>
+  
 <script type="text/template" id="ourNewPage">
   <div class="navbar">
             <div class="navbar-inner">
@@ -35,9 +37,9 @@
   </div>
 </script>
 
-  <body class="theme-red" >
+  <body class="theme-gray" >
     <div class="views ">
-   <!--   <div class="scanButton"></div> -->
+     <div class="scanButton"></div>
       <div class="view view-main">
         <div class="pages navbar-fixed toolbar-fixed">
             <div class="page layout-white" data-page="index">
@@ -70,13 +72,6 @@
                   
                     <ul> 
                    <table id="box">
-
-
-                    <tr class="rowbox" id="idfirstDefault">
-                      <th class="textbox"><input type="text" placeholder="MM/DD/YYYY" class="input"></th>
-                      <th class="buttons"><span class="material-icons succesfulUpload">check_circle</span><span name="firstDefault" class="material-icons delete" id="delete">delete</span></th>
-                    </tr>
-
 
 <!-- <button id="addDiv">Add div Inside #box</button> -->
 
@@ -125,7 +120,7 @@
                  <div class="item-inner"> 
                     <div class="item-title label">Note</div>
                       <div class="item-input">
-                          <textarea class="resizable"></textarea>
+                          <textarea class="resizable" id="note"></textarea>
                        </div>
                  </div>
               </div>
@@ -136,7 +131,7 @@
   
               <div class="row">
                   <div class="col-50.tablet-25">
-                     <input type="submit" value="Send" class="button button-big button-fill color-red"/>       
+                     <input id="send" type="submit" value="Send" class="button button-big button-fill color-red"/>       
                   </div>
                   <div class="col-50.tablet-25">
                     <input type="submit" value="Save" class="button button-big button-fill color-gray" id="save"/>
@@ -154,6 +149,23 @@
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
-    
+
+<!-- //  window.onload = function() {
+//      var n = new Date();
+//       var year = n.getFullYear();
+//        var month = n.getMonth() + 1;
+//        var day = n.getDate();
+       
+//     if(month < 10) {
+//     month = "0" + month;
+//   } 
+//   if (day < 10) {
+//     day = "0" + day;
+//   }
+//   var today = year + "-" + month + "-" + day;
+//   document.getElementById('datobox').value =today;
+   
+// }
+ -->
   </body>
 </html>

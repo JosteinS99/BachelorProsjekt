@@ -55,17 +55,17 @@ div.hidden
 
 .scanButton{
   bottom: 1em;
-    left: 42.5%;
+    left: 38.5%;
     position: absolute;
     height: 14%;
-    width: 15%;
+    width: 23%;
     background-color: #585656;
     color: white;
     z-index: 10007;
     text-align: center;
     border-radius: 10em;
-    border: 5px solid #aa9898;
-}
+    border: 5px solid #aa9898
+  }
 
 .content-block-title {
     text-align: center;
