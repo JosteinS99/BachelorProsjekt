@@ -10,8 +10,9 @@ var myApp = new Framework7({
    },
    onAjaxComplete:function (xhr) {
        myApp.hideIndicator();
-   }       
-  
+   }   
+
+ 
 });
 
 // Export selectors engine
@@ -26,17 +27,14 @@ var mainView = myApp.addView('.view-main', {
 
 
 
-
-
 $$(document).on('pageInit', function(e){
   //do something here when page loaded and initialized
 var page = e.detail.page;
 if (page.name === 'index') {
   //showpop
-    $$( "#showPop" ).click(function() {
-     mainView.router.loadContent($$('#ourNewPage').html());
-    });
-  }
+
+
+
 });
 
 // $$(document).on('pageInit','.page[data-page="about"]', function(e){
@@ -50,23 +48,7 @@ if (page.name === 'index') {
 
 // };
 
-function setDate() {
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getFullYear();
- 
 
-
-  if(month < 10) {
-    month = "0" + month;
-  } 
-  if (day < 10) {
-    day = "0" + day;
-  }
-  var today = year + "-" + month + "-" + day;
-  document.getElementById('datobox').value =today;
-}
 
 
 
