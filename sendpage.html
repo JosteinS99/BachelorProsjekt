@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>NOV Rigscan</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="jquery.js"></script>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- It should be included After main Framework7 styles -->
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" type="text/css" href="stil.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="page cached layout-white" data-page="send">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center">Send data</div>
+            </div>
+        </div>
+
+        <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+                <a href="#index" class="link"></a>
+            </div>
+        </div>
+
+        <div class="page-content">
+
+            <!--    <input class="freewriting" id="IDtekst" type="text"  placeholder="Bruker id">
+                <input class="freewriting" id="scanData" type="text"  placeholder="Scandata"> -->
+
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title label">Category</div>
+                    <div class="item-input">
+                        <select>
+                            <option>Equipment 1</option>
+                            <option>Equipment 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title label">Note</div>
+                    <div class="item-input">
+                        <textarea class="resizable"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="extraControls" class="hidden">
+                <input class="dato" type="date" id="myDate" disabled />
+            </div>
+
+            <div class="row">
+                <div class="col-50.tablet-25">
+                    <input type="submit" value="Send" class="button button-big button-fill color-red" />
+                </div>
+                <div class="col-50.tablet-25">
+                    <input type="submit" value="Save" class="button button-big button-fill color-gray" />
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
