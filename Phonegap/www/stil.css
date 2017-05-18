@@ -1,0 +1,249 @@
+#notebox {
+  width: 385px;
+    height: 210px;
+   /* border: 5px solid green;*/
+    left: 0px;
+    top: 19px;
+    position: relative;
+}
+
+#qr-inner {
+    width: 384px;
+    height: 55px;
+    position: relative;
+    top: 22px;
+    left: 0px;
+    border: 2px solid red;
+}
+
+#qlabel{
+  left: 0px;
+  top: 18px;
+  position: relative;
+  /*border: 5px solid red;*/
+  width: 54px;
+  height: 19px;
+}
+
+#nlabel{
+  left: 0px;
+  top: 17px;
+  position: relative;
+  /*border: 5px solid red;*/
+  width: 34px;
+  height: 19px;
+}
+
+#catlabel{
+  left: 0px;
+  top: -2px;
+  position: relative;
+ /* border: 5px solid red;*/
+  width: 62px;
+  height: 19px;
+}
+
+
+#close {
+  left: 90%;
+  top: 0px;
+  position: absolute;
+/*  border: 5px solid red; */
+}
+
+#category{ 
+  border-color:#cccccc; 
+  padding:6px; 
+  font-size:17px; 
+  text-align:center; border-width:1px; 
+  border-radius:14px; 
+  border-style:solid; 
+  box-shadow: 0px 0px 0px 0px rgba(42,42,42,.75);
+ font-weight:normal; font-style:none;  
+} 
+
+#tool {
+  border-color:#cccccc; 
+  padding:6px; 
+  font-size:17px; 
+  text-align:center; border-width:1px; 
+  border-radius:14px; 
+  border-style:solid; 
+  box-shadow: 0px 0px 0px 0px rgba(42,42,42,.75);
+  font-weight:normal; font-style:none;  
+    position: relative;
+    top: 0px;
+    left: 13px;
+    width: 25%;
+  }
+
+
+#note {
+    width: 98.5%;
+    height: 15em;
+    top: 6px;
+    left: 0px;
+    position: relative;
+  }
+
+div.hidden
+{
+   display: none
+}
+
+./*btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #f01313;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}*/
+
+
+#localdate {
+  width: 180px;
+  height: 20px;
+}
+
+
+#send {
+    top: 28px;
+    left: 5px;
+    width: 263%;
+}
+
+#save{
+    top: 28px;
+    left: -102px;
+    width: 263%;
+}
+/*.buttons{
+
+  position: relative;
+  float: right;
+  padding-top: 25px;
+  top: 46px;
+  left: -22px;
+}*/
+ 
+
+.scanButton{
+    bottom: 1em;
+    left: 42.5%;
+    position: absolute;
+    height: 80px;
+    width: 90px;
+    background-color: #585656;
+    color: white;
+    z-index: 10007;
+    text-align: center;
+    border-radius: 2em;
+    border: 5px solid #aa9898;
+  }
+
+.content-block-title {
+    text-align: center;
+    font-weight:  bold;
+}
+
+
+/*Icons*/
+.succesfulUpload {
+/*display: none; */
+color:green;
+}
+
+.delete {
+  /*kanskje lage en class for deletene?*/
+     top: 26px;
+    color: red;
+    float: right;
+}
+
+
+
+/*Upload button*/
+#upload{
+  position: relative;
+  top: 50px;
+  width: 50%;
+  left: 22%;
+  margin-bottom: 100px;
+}
+
+
+
+.rowbox{
+position: relative;
+/*background-color: green; */
+height: 161px;
+}
+
+
+#toolbox{
+overflow: hidden;
+height: 47px; 
+width: 54%;
+position: relative;
+top: 5px;
+left: 27%;
+}
+
+#categorybox {
+    height: 59px;
+    width: 35%;
+    text-align: center;
+    left: -130px;
+    top: 57px;
+    position: relative;
+    border: 1px solid blue;
+}
+
+
+table {
+ border-collapse: collapse;
+}
+
+
+#box {
+/*border: 1px solid red;*/
+  width: 100%;
+  position: relative;
+    top: 24px;;
+    left: -7%;
+  /*  background-color: blue;*/
+}
+
+.input {
+    font-size: 13pt;
+}
+
+input[type="text"] {
+    border-radius: 0.4em;
+    border: 1px solid blue;
+    padding: 2px;
+    margin: 1px;
+    text-align: center;
+    height: 1.6em;
+    width: 90%;
+}
+
+
+#toolfield {
+    background-color: #e4e4e4;
+    border: 1px solid #b8b8b8;
+    color: black;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+#qr {
+    width: 50%;
+    top: -8px;
+    left: 14%;
+    position: relative;
+}

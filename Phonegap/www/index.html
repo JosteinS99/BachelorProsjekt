@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>NOV Rigscan</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+   
+
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link rel="stylesheet"  href="css/framework7.material.colors.min.css">
+    <!-- It should be included After main Framework7 styles -->
+  
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" type="text/css" href="stil.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+
+  <body class="theme-gray" >
+     <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div class="page layout-white" data-page="index">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <div class="center">Rigscan</div>
+                    </div>
+                 </div>
+
+              
+            <div class="toolbar toolbar-bottom">
+                 <div class="toolbar-inner">
+                    <!-- <a href="#send" class="link">send</a> -->
+                    <a href="#" data-popup=".popup-send" class="open-popup">Open About Popup </a>
+                      
+                 </div>
+              </div> 
+                <button class="scanButton"></button>
+            
+            <div class="page-content hide-navbar-on-scroll hide-bars-on-scroll">
+              <div class="content-block-title">Saved data</div>
+                  
+                <ul> 
+                   <table id="box">
+              
+
+                  </table>
+               
+                     <div class=".col-100.tablet-50">
+                        <input type="submit" value="Upload" id="upload" class="button button-big button-fill color-red"/>
+                     </div>
+                 </ul>
+            </div>         
+        </div> 
+      
+ 
+
+                <!-- SEND PAGE  se på dynamic page på fm7 tutorial -->
+    <!-- 
+             <div class="page cached layout-white" data-page="send">
+               <div class="navbar">
+                    <div class="navbar-inner">
+                      <div class="center">Send data</div>
+                    </div>
+                 </div>
+
+              <div class="toolbar toolbar-bottom">
+                 <div class="toolbar-inner">
+                  <a href="#index" class="link">home</a>
+                    <a href="#" class="link" id="showPop">ShowPop</a>
+                 </div>
+              </div> -->
+
+             
+
+
+              </div>  <!-- content end(send) -->
+           </div> <!-- page end (send) -->
+         </div>  <!-- fixed navbar end -->
+         <div class="popup popup-send">
+    
+    <div class="content-block">
+      
+    <!--   <p><a href="#" class="close-popup">Close popup</a></p>
+     <div class="page-content"> -->
+
+              <div class="item-content">
+                  <i class="material-icons close-popup" id="close">close</i> 
+                 <div class="item-inner"> 
+                    <div class="item-title label" id="catlabel">Category</div>
+                        <div class="item-input">
+                             <select id="category">
+                             <option>Equipment 1</option>
+                             <option>Equipment 2</option>
+                           </select>
+                       
+
+                           <select id="tool">
+                             <option>Tool 1</option>
+                             <option>Tool 2</option>
+                           </select>
+                      </div>
+                </div>
+              </div>
+
+              <div class="item-content">
+                 <div class="item-inner"> 
+                    <div class="item-title label" id="nlabel">Note</div>
+                      <div class="item-input" id="notebox">
+                          <textarea class="resizable" id="note"></textarea>
+                       </div>
+                 </div>
+              </div>
+
+              <div class="item-content">
+                 <div class="item-inner" id="qr-inner"> 
+                    <div class="item-title label" id="qlabel">Qr-kode</div>
+                      
+                          <input id="qr" type='text' class='input'>
+                      
+                 </div>
+              </div>
+
+                <div id="extraControls" class="hidden">
+                  <input  class="dato" type="date" id="myDate" disabled />
+                </div>
+  
+              <div class="row">
+                  <div class="col-50.tablet-25">
+                         <a href="#" class="close-popup"><input id="send" type="submit" value="Send" class="button button-big button-fill color-red"/> </a>  
+                  </div>
+                  <div class="col-50.tablet-25">
+                    <a href="#" class="close-popup"> <input type="submit" value="Save" class="button button-big button-fill color-gray" id="save"/></a>
+                      </div> 
+                  </div>
+
+
+    </div>
+  </div>
+
+    </div> <!-- view main end -->
+</div>  <!-- view end -->
+
+    <!-- Path to Framework7 Library JS -->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+     <script src="minkode.js"></script>
+
+<script type="text/javascript">
+
+//myApp.popup('.popup-send');
+
+</script>
+
+
+
+  </body>
+</html>
